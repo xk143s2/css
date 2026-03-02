@@ -354,11 +354,21 @@ box-shadow:
     rgba(143,180,214,.25),
     transparent 65%
   );
-  color: #fff !important;
+  color: transparent !important;
   letter-spacing: .2em;
   border:1px solid rgba(255,255,255,.06);
   transition: .3s;
-  font-size:9px;
+  font-size:0 !important;
+  position:relative;
+}
+
+.card-filter .btn::after {
+  content: "OPEN";
+  font-family:var(--eng);
+  font-weight:300;
+  color:var(--white);
+  font-size: 9px !important;
+  letter-spacing:2px;
 }
 
 .card-filter.card .btn:hover{
@@ -382,6 +392,28 @@ box-shadow:
   );
 }
 
+.card-filter input[name="unlock_pass"]::placeholder {
+  color: #FFFFFF;
+  font-size: 9px;
+  letter-spacing: 2px;
+  opacity: 1;
+  font-family:var(--eng);
+  font-weight:300;
+}
+
+.card-filter input[name="unlock_pass"],
+.card-filter input[name="unlock_pass"]:focus,
+.card-filter input[name="unlock_pass"]:not(:placeholder-shown) {
+  transform: none !important;
+  width: 80% !important;
+  height: 40px !important;
+  display: block;
+  margin: 0 auto;
+  font-size: 9px !important;
+  padding: 0 15px !important;
+  border: none !important;
+  margin:-10px 0 !important;
+}
 
 /* ===== ロゴ ===== */
 
